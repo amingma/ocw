@@ -170,7 +170,7 @@ def averaged_perceptron(data, labels, params = {}, hook = None):
         for i in range(n):
             x = data[:,i:i+1]
             y = labels[:,i:i+1]
-            print(y.shape, positive(x, theta, theta_0).shape)
+            # print(y, positive(x, theta, theta_0).shape)
             if y * positive(x, theta, theta_0) <= 0.0:
                 theta = theta + y * x
                 theta_0 = theta_0 + y
